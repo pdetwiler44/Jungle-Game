@@ -1,0 +1,77 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+
+using namespace std;
+
+int main() {
+
+
+  cout << "Hi! Welcome to the jungle! This is a text-based adventure game filled with" << endl;
+	cout << "humor, puzzles, and, most importantly, jaguars.  Type 'help' to see the help" << endl;
+	cout << "menu, or press enter to begin! Note: 'help' can be enetered at any time." << endl;
+	cout << endl;
+	string temp;
+	getline(cin, temp);
+	
+
+	cout << "You wake up in a small clearing.  Your head is throbbing.  You slowly move to a" << endl;
+	cout << "seated position, collecting your thoughts. The last thing you remember is" << endl;
+	cout << "tripping and falling face first onto the hard ground.  You were out cold, but" << endl;
+	cout << "you don't know for how long.  The only thing you can remember is that you need" << endl;
+	cout << "to find an orb.  An orb of magnificent power." << endl;
+	cout << endl;
+
+     //put all your code here
+	/*while (w.get_x() == "x coordinate" && w.get_y() == "y coordinate" && "map name" == true) {
+
+
+     cout << "insert description" << endl;
+
+     //insert any commands that need to be carried out as a comment
+
+}*/
+	int wx;
+	int wy;
+	wx=6;
+	wy=7;
+
+	//World screen(6,7)
+
+	while (wx == 6 && wy == 7) {
+
+
+	cout << "You are in a jungle. There is vegetation all around. You can hear spider" << endl;
+	cout << "monkeys." << endl;
+	cout << "What do you do?" << endl;
+
+	string temp;
+	getline(cin, temp);
+	cout << endl;
+
+	if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+		//w.move_up();
+		break;
+	}
+
+	else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+		//w.move_left();
+		break;
+	}
+
+	else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+		//w.move_down();
+		break;
+	}
+
+	else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+		//w.move_left();
+		break;
+	}
+
+	else if( (temp == "look north") || (temp == "examine north") ){
+		cout << "You see an overgrown path." << endl;
+		cout << endl;
+	}
+	
