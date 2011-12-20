@@ -1,3 +1,5 @@
+//I WON THE GAME
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -14,7 +16,7 @@ int main() {
 	cout << endl;
 	string temp;
 	getline(cin, temp);
-	
+
 
 	cout << "You wake up in a small clearing.  Your head is throbbing.  You slowly move to a" << endl;
 	cout << "seated position, collecting your thoughts. The last thing you remember is" << endl;
@@ -74,4 +76,3 @@ int main() {
 		cout << "You see an overgrown path." << endl;
 		cout << endl;
 	}
-	
