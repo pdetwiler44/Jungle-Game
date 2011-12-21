@@ -10,13 +10,13 @@ using namespace std;
 int main() {
 
 
-  cout << "Hi! Welcome to the jungle! This is a text-based adventure game filled with" << endl;
+	cout << "Hi! Welcome to the jungle! This is a text-based adventure game filled with" << endl;
 	cout << "humor, puzzles, and, most importantly, jaguars.  Type 'help' to see the help" << endl;
 	cout << "menu, or press enter to begin! Note: 'help' can be enetered at any time." << endl;
 	cout << endl;
 	string temp;
 	getline(cin, temp);
-
+	
 
 	cout << "You wake up in a small clearing.  Your head is throbbing.  You slowly move to a" << endl;
 	cout << "seated position, collecting your thoughts. The last thing you remember is" << endl;
@@ -36,12 +36,576 @@ int main() {
 }*/
 	int wx;
 	int wy;
-	wx=6;
-	wy=7;
+	wx=13;
+	wy=29;
 
-	//World screen(6,7)
+	//World screen (1,1) or (0,0)
 
-	while (wx == 6 && wy == 7) {
+	while (wx == 1 && wy == 1){
+		cout << "You arrive at what can only be described as a worn down house at the base" << endl;
+		cout << "of the cliff.  From the looks of it, the house has been abandoned for" << endl;
+		cout << "awhile now.  There's something odd about the way the house looks, though..." << endl;
+		cout << "What do you do?" << endl;
+
+		string temp;
+		getline(cin, temp);
+		cout << endl;
+
+	if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+		cout << "You cannot move that direction" << endl;
+		cout << endl;
+	}
+
+	 else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+		//w.move_right();
+		break;
+	}
+
+	 else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+		cout << "You cannot move that direction" << endl;
+		cout << endl;
+	}
+
+	else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+		cout << "You cannot move that direction" << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look north") || (temp == "examine north") ){
+		cout << "You see the base of a taaaaaaall cliff." << endl;
+		cout << endl;
+	}
+	
+	else if( (temp == "look east") || (temp == "examine east") ){
+		cout << "You see a small clearing." << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look south") || (temp == "examine south") ){
+		cout << "It's the river's edge." << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look west") || (temp == "examine west") ){
+		cout << "The river wraps around here, too." << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look house") || (temp == "house") || (temp == "examine house") || (temp == "look at house") || (temp == "check house") ){
+		cout << "It's a small house.  A couple of boarded up windows and an oddly sturdy" << endl;
+		cout << "looking door send the message that nobody is home, and won't be coming home" << endl;
+		cout << "anytime soon.  After staring at the house for awhile, you realize that it" << endl;
+		cout << "looks kind of like a an old Volkswagen Beetle.  How is that even possible?" << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look at windows") || (temp == "look windows") || (temp == "examine windows") || (temp == "windows") || (temp == "check windows") || (temp == "look at window") || (temp == "window") || (temp == "look window") || (temp == "examine window") ){
+		cout << "The windows are definitely boarded shut.  If you want to find a way in," << endl;
+		cout << "it's be best to check elsewhere.  Because these are boarded up. For sure." << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "break windows") || (temp == "break window") || (temp == "shatter window") || (temp == "destroy window") ){
+		cout << "Try as you might, you can't break through the windows.  Maybe that's" << endl;
+		cout << "because they're boarded up.  And anything boarded up is invincible." << endl;
+		cout << "Have you ever played video games before?" << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "drive house") || (temp == "take house for drive") || (temp == "take house for a drive") || (temp == "take the house for a drive") ){
+		cout << "You find the driver's side of the house, and find it unlocked.  You get in" << endl;
+		cout << "and find the keys are still in the ignition.  How fortunate!  You turn the" << endl;
+		cout << "keys and... You realize that none of this is happening, right?  Game on." << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look at door") || (temp == "look door") || (temp == "examine door") ){
+		cout << "It's a darn sturdy door, but there is a place for a key.  Have you found" << endl;
+		cout << "the key yet, dawg?" << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "burn down house") || (temp == "burn house") || (temp == "light house on fire") || (temp == "set house on fire") || (temp == "set fire to house") ){
+		cout << "You attempt to burn the house down, but only one part of the house lights." << endl;
+		cout << "You notice the irony, as all you can hear in your head is 'The roof, the" << endl;
+		cout << "roof, the roof is on fire!'  And then the fire goes out, and the hosue is" << endl;
+		cout << "left untarnished.  Has it been blessed by a gypsy?!" << endl;
+		cout << endl;
+	}
+
+	// Soooo... Is there gonna be a command that is use 'item' and then use on something? or should I keep "use key on door"?
+
+	else if( (temp == "unlock door") || (temp == "unlock the door") || (temp == "use key on door") ){
+		cout << "You unlocked the door." << endl;
+		cout << endl;
+		// Unlock the door
+	}
+
+	//else if( (temp == "enter house" && /* Door unlocked */) || (temp == "use door" && /* Door unlocked */) || (temp == "go in house" && /* Door unlocked */) ){
+		//Enter the house and change maps.
+		//break;
+	//}
+
+		else if( (temp == "examine cliff") || (temp == "look at cliff") || (temp == "look cliff") ){
+			cout << "Yea, that's definitely a big cliff." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "climb cliff") || (temp == "climb") || (temp == "scale cliff") ){
+			cout << "Well... I don't know how to break it to you... But you aren't actually" << endl;
+			cout << "Spiderman. Sorry, you're not climbing this bad boy anytime soon." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "swim") || (temp == "go in river") || (temp == "swim in river") || (temp == "swim river") ){
+			cout << "Nope. Not today. Try again later" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look at river") || (temp == "look river") || (temp == "check river") || (temp == "examine river") || (temp == "river") ){
+			cout << "Not only is the river too wide to jump over, it is also too fast to" << endl;
+			cout << "fast to swim in.  Unless you are an awesome fish.  Or a jaguar." << endl;
+			cout << endl;
+		}
+
+	else{
+		cout << "Not a valid command" << endl;
+		cout << endl;
+	}
+
+	}
+
+	//World screen (1,5) or (0,1)
+
+	while(wx == 1 && wy == 5){
+		cout << "You find yourself in the jungle, with a gigantic cliff to the North." << endl;
+		cout << endl;
+
+		string temp;
+		getline(cin, temp);
+		cout << endl;
+
+		if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+			cout << "You cannot move in that direction." << endl;
+			cout << endl;
+		}
+
+		else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+			//w.move_right();
+			break;
+		}
+
+		else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+			//w.move_down();
+			break;
+		}
+
+		else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+			//w.move_left();
+			break;
+		}
+
+		else if( (temp == "look north") || (temp == "examine north") ){
+			cout << "You see a large cliff" << endl;
+			cout << endl;
+		}
+	
+		else if( (temp == "look east") || (temp == "examine east") ){
+			cout << "You see the jungle." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look south") || (temp == "examine south") ){
+			cout << "You see a path." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look west") || (temp == "examine west") ){
+			cout << "You see what could be a house." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "examine cliff") || (temp == "look at cliff") || (temp == "look cliff") ){
+			cout << "Yea, that's definitely a big cliff." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "climb cliff") || (temp == "climb") || (temp == "scale cliff") ){
+			cout << "Well... I don't know how to break it to you... But you aren't actually" << endl;
+			cout << "Spiderman. Sorry, you're not climbing this bad boy anytime soon." << endl;
+			cout << endl;
+		}
+		
+		else{
+			cout << "Not a valid command" << endl;
+			cout << endl;
+		}
+
+	}
+
+	//World screen (1,9) or (0,2)
+
+	while(wx == 1 && wy == 9){
+		cout << "You find yourself at the base of a cliff. You see nothing interesting." << endl;
+		cout << endl;
+
+		string temp;
+		getline(cin, temp);
+		cout << endl;
+
+		if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+			cout << "You cannot move in that direction." << endl;
+			cout << endl;
+		}
+
+		else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+			//w.move_right();
+			break;
+		}
+
+		else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+			//w.move_down();
+			break;
+		}
+
+		else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+			//w.move_left();
+			break;
+		}
+
+		else if( (temp == "look north") || (temp == "examine north") ){
+			cout << "You see a large cliff" << endl;
+			cout << endl;
+		}
+	
+		else if( (temp == "look east") || (temp == "examine east") ){
+			cout << "You see the jungle." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look south") || (temp == "examine south") ){
+			cout << "You see a path." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look west") || (temp == "examine west") ){
+			cout << "You see a way to walk" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "examine nothing interesting") || (temp == "look at nothing interesting") || (temp == "look nothing interesting") ){
+			cout << "You see exactly what you were examining. Now play the game. Wise guy." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "examine cliff") || (temp == "look at cliff") || (temp == "look cliff") ){
+			cout << "Yea, that's definitely a big cliff." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "climb cliff") || (temp == "climb") || (temp == "scale cliff") ){
+			cout << "Well... I don't know how to break it to you... But you aren't actually" << endl;
+			cout << "Spiderman. Sorry, you're not climbing this bad boy anytime soon." << endl;
+			cout << endl;
+		}
+
+		else{
+			cout << "Not a valid command" << endl;
+			cout << endl;
+		}
+
+	}
+
+	//World screen (1,13) or (0,3)
+	
+	while(wx == 1 && wy == 13){
+		cout << "You are at the base of a large cliff." << endl;
+		cout << endl;
+
+		string temp;
+		getline(cin, temp);
+		cout << endl;
+
+		if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+			cout << "You cannot move in that direction." << endl;
+			cout << endl;
+		}
+
+		else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+			cout << "You cannot move in that direction." << endl;
+			cout << endl;
+		}
+
+		else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+			//w.move_down();
+			break;
+		}
+
+		else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+			cout << "You cannot move in that direction." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look north") || (temp == "examine north") ){
+			cout << "You see a large cliff" << endl;
+			cout << endl;
+		}
+	
+		else if( (temp == "look east") || (temp == "examine east") ){
+			cout << "You see a large cliff" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look south") || (temp == "examine south") ){
+			cout << "You see a small clearing." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look west") || (temp == "examine west") ){
+			cout << "You see a path" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "examine cliff") || (temp == "look at cliff") || (temp == "look cliff") ){
+			cout << "Yea, that's definitely a big cliff." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "climb cliff") || (temp == "climb") || (temp == "scale cliff") ){
+			cout << "Well... I don't know how to break it to you... But you aren't actually" << endl;
+			cout << "Spiderman. Sorry, you're not climbing this bad boy anytime soon." << endl;
+			cout << endl;
+		}
+
+		else{
+			cout << "Not a valid command" << endl;
+			cout << endl;
+		}
+
+	}
+
+	//World screen (1,45) or (0,11)
+
+	//World screen (1,49) or (0,12)
+
+	//World screen (1,53) or (0,13)
+
+	//World screen (1,57) or (0,14)
+
+	//World screen (1,61) or (0,15)
+
+	//World screen (3,5) or (1,1)
+	while(wx == 3 && wy == 5){
+		cout << "The river is to the West. That's about it." << endl;
+		cout << endl;
+
+		string temp;
+		getline(cin, temp);
+		cout << endl;
+
+		if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+			//w.move_up();
+			break;
+		}
+
+		else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+			//w.move_right()
+		}
+
+		else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+			//w.move_down();
+			break;
+		}
+
+		else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+			cout << "You cannot move in that direction" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look north") || (temp == "examine north") ){
+			cout << "You see a path" << endl;
+			cout << endl;
+		}
+	
+		else if( (temp == "look east") || (temp == "examine east") ){
+			cout << "You see a clearing" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look south") || (temp == "examine south") ){
+			cout << "You see a way to travel" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look west") || (temp == "examine west") ){
+			cout << "You see the raging river." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "swim") || (temp == "go in river") || (temp == "swim in river") || (temp == "swim river") ){
+			cout << "Nope. Not today. Try again later" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look at river") || (temp == "look river") || (temp == "check river") || (temp == "examine river") || (temp == "river") ){
+			cout << "Not only is the river too wide to jump over, it is also too fast to" << endl;
+			cout << "fast to swim in.  Unless you are an awesome fish.  Or a jaguar." << endl;
+			cout << endl;
+		}
+
+		else{
+			cout << "Not a valid command" << endl;
+			cout << endl;
+		}
+
+	}
+
+	//World screen (3,9) or (1,2)
+
+	while(wx == 3 && wy == 9){
+		cout << "Nothing special here, but you can hear a river is near." << endl;
+		cout << endl;
+
+		string temp;
+		getline(cin, temp);
+		cout << endl;
+
+		if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+			//w.move_up();
+			break;
+		}
+
+		else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+			//w.move_right()
+		}
+
+		else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+			//w.move_down();
+			break;
+		}
+
+		else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+			//w.move_left();
+			break;
+		}
+
+		else if( (temp == "look north") || (temp == "examine north") ){
+			cout << "You look north" << endl;
+			cout << endl;
+		}
+	
+		else if( (temp == "look east") || (temp == "examine east") ){
+			cout << "You see a thin path" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look south") || (temp == "examine south") ){
+			cout << "You see a jaguar! Just kidding. It's a path." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look west") || (temp == "examine west") ){
+			cout << "You see... Well, it looks like the jungle." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "listen river") || (temp == "listen to river") ){
+			cout << "It sounds like a river." << endl;
+			cout << endl;
+		}
+
+		else{
+			cout << "Not a valid command" << endl;
+			cout << endl;
+		}
+
+	}
+
+	//World screen (3,13) or (1,3)
+
+	while(wx == 3 && wy == 9){
+		cout << "There's a cliff to the East." << endl;
+		cout << endl;
+
+		string temp;
+		getline(cin, temp);
+		cout << endl;
+
+		if((temp == "N") || (temp == "n") || (temp == "move north") || (temp == "walk north") || (temp == "north") || (temp == "go north") ){
+			//w.move_up();
+			break;
+		}
+
+		else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
+			cout << "You cannot move in that direction" << endl;
+			cout << endl;
+		}
+
+		else if ((temp == "S") || (temp == "s") || (temp == "move south") || (temp == "walk south") || (temp == "south") || (temp == "go south") ){
+			//w.move_down();
+			break;
+		}
+
+		else if ((temp == "W") || (temp == "w") || (temp == "move west") || (temp == "walk west") || (temp == "west") || (temp == "go west") ){
+			//w.move_left();
+			break;
+		}
+
+		else if( (temp == "look north") || (temp == "examine north") ){
+			cout << "You look north" << endl;
+			cout << endl;
+		}
+	
+		else if( (temp == "look east") || (temp == "examine east") ){
+			cout << "You see a large cliff." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look south") || (temp == "examine south") ){
+			cout << "You see a jaguar! Just kidding. It's a path." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "look west") || (temp == "examine west") ){
+			cout << "You see another section of jungle" << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "examine cliff") || (temp == "look at cliff") || (temp == "look cliff") ){
+			cout << "Yea, that's definitely a big cliff." << endl;
+			cout << endl;
+		}
+
+		else if( (temp == "climb cliff") || (temp == "climb") || (temp == "scale cliff") ){
+			cout << "Well... I don't know how to break it to you... But you aren't actually" << endl;
+			cout << "Spiderman. Sorry, you're not climbing this bad boy anytime soon." << endl;
+			cout << endl;
+		}
+
+		else{
+			cout << "Not a valid command" << endl;
+			cout << endl;
+		}
+
+	}
+
+	//World screen (3,25) or (1,6)
+
+	while(wx == 3 && wy == 9){
+		cout << "You step into a small clearing in the jungle at the corner of the" << endl;
+		cout << "large cliff.  You feel a little uneasy about this place.  Then it" << endl;
+		cout << "hits you.  You have been cornered by one million jaguars.  Try as" << endl;
+		cout << "you might to escape the jaguars wrath, there is no hope.  You lost" << endl;
+		cout << "the game.  That's right.  You lose.  Start over." << endl;
+		cout << endl;
+
+		// Now we have to find a way to kill them and reset the game. They can reload from a save, though.
+
+	}
+
+	//World screen(6,7), or (13,29)
+
+	while (wx == 13 && wy == 29) {
 
 
 	cout << "You are in a jungle. There is vegetation all around. You can hear spider" << endl;
@@ -58,7 +622,7 @@ int main() {
 	}
 
 	else if ((temp == "E") || (temp == "e") || (temp == "move east") || (temp == "walk east") || (temp == "east") || (temp == "go east") ){
-		//w.move_left();
+		//w.move_right();
 		break;
 	}
 
@@ -76,3 +640,40 @@ int main() {
 		cout << "You see an overgrown path." << endl;
 		cout << endl;
 	}
+	
+	else if( (temp == "look east") || (temp == "examine east") ){
+		cout << "You see a small clearing" << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look south") || (temp == "examine south") ){
+		cout << "You see things moving, but you can't distinguish what the things are." << endl;
+		cout << "Maybe sea monkeys?" << endl;
+		cout << endl;
+	}
+
+	else if( (temp == "look west") || (temp == "examine west") ){
+		cout << "You see a big tree over yonder." << endl;
+		cout << endl;
+	}
+
+    else if((temp == "look at vegetation") || (temp == "look vegetation") || (temp == "examine vegetation") || (temp == "vegetation") ){ 
+        cout << "Dayum, that is some dense vegetation" << endl;
+		cout << endl;
+	}
+
+	else if((temp == "listen spider monkeys") || (temp == "listen to spider monkeys")){
+		cout << "Spider monkeys laugh at you. Do something else." << endl;
+		cout << endl;
+	}
+
+	else{
+		cout << "Not a valid command" << endl;
+		cout << endl;
+	}
+	
+	}
+     system("pause");
+     return 0;
+
+}
